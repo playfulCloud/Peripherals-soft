@@ -1,0 +1,17 @@
+C:\Users\lab\Downloads\Urzadzenia-peryferyjne-master\Joystick\JoyStrick\JoyStrick\bin\Debug\JoyStrick.exe.config
+C:\Users\lab\Downloads\Urzadzenia-peryferyjne-master\Joystick\JoyStrick\JoyStrick\bin\Debug\JoyStrick.exe
+C:\Users\lab\Downloads\Urzadzenia-peryferyjne-master\Joystick\JoyStrick\JoyStrick\bin\Debug\JoyStrick.pdb
+C:\Users\lab\Downloads\Urzadzenia-peryferyjne-master\Joystick\JoyStrick\JoyStrick\bin\Debug\SlimDX.dll
+C:\Users\lab\Downloads\Urzadzenia-peryferyjne-master\Joystick\JoyStrick\JoyStrick\obj\Debug\JoyStrick.csprojAssemblyReference.cache
+C:\Users\lab\Downloads\Urzadzenia-peryferyjne-master\Joystick\JoyStrick\JoyStrick\obj\Debug\MainWindow.g.cs
+C:\Users\lab\Downloads\Urzadzenia-peryferyjne-master\Joystick\JoyStrick\JoyStrick\obj\Debug\App.g.cs
+C:\Users\lab\Downloads\Urzadzenia-peryferyjne-master\Joystick\JoyStrick\JoyStrick\obj\Debug\JoyStrick_MarkupCompile.cache
+C:\Users\lab\Downloads\Urzadzenia-peryferyjne-master\Joystick\JoyStrick\JoyStrick\obj\Debug\JoyStrick_MarkupCompile.lref
+C:\Users\lab\Downloads\Urzadzenia-peryferyjne-master\Joystick\JoyStrick\JoyStrick\obj\Debug\MainWindow.baml
+C:\Users\lab\Downloads\Urzadzenia-peryferyjne-master\Joystick\JoyStrick\JoyStrick\obj\Debug\JoyStrick.g.resources
+C:\Users\lab\Downloads\Urzadzenia-peryferyjne-master\Joystick\JoyStrick\JoyStrick\obj\Debug\JoyStrick.Properties.Resources.resources
+C:\Users\lab\Downloads\Urzadzenia-peryferyjne-master\Joystick\JoyStrick\JoyStrick\obj\Debug\JoyStrick.csproj.GenerateResource.cache
+C:\Users\lab\Downloads\Urzadzenia-peryferyjne-master\Joystick\JoyStrick\JoyStrick\obj\Debug\JoyStrick.csproj.CoreCompileInputs.cache
+C:\Users\lab\Downloads\Urzadzenia-peryferyjne-master\Joystick\JoyStrick\JoyStrick\obj\Debug\JoyStrick.csproj.CopyComplete
+C:\Users\lab\Downloads\Urzadzenia-peryferyjne-master\Joystick\JoyStrick\JoyStrick\obj\Debug\JoyStrick.exe
+C:\Users\lab\Downloads\Urzadzenia-peryferyjne-master\Joystick\JoyStrick\JoyStrick\obj\Debug\JoyStrick.pdb
