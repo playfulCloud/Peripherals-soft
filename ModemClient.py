@@ -1,51 +1,34 @@
-import serial
-import threading
-from xmodem import XMODEM
+import socket
+import os
 
-def read_from_port(port):
-    while True:
-        data = port.read_until(b'\r')
-        if data:
-            try:
-                print(data.decode('utf-8'), end='')
-            except UnicodeDecodeError:
-                print(data, end='')
+def receive_file(server_socket):
+    client_socket, address = server_socket.accept()
+    print(f"Połączenie z {address} zostało nawiązane.")
 
-def getc(size, timeout=1):
-    return modem_port.read(size) or None
+    with client_socket:
+        file_name = client_socket.recv(1024).decode()
+        file_size = int(client_socket.recv(1024).decode())
 
-def putc(data, timeout=1):
-    modem_port.write(data)
-    time.sleep(0.1)  # give some time to buffer
+        with open(file_name, 'wb') as file:
+            bytes_received = 0
+            while bytes_received < file_size:
+                data = client_socket.recv(1024)
+                if not data:
+                    break
+                file.write(data)
+                bytes_received += len(data)
 
-# Create a port object connected to device 'COM1'. 'timeout=5' sets the read timeout to 5 seconds.
-modem_port = serial.Serial(port='COM1', xonxoff=True, dsrdtr=True, timeout=5)
-print('Port opened!\n')
+        print(f"Plik {file_name} został odebrany.")
 
-# Start the listening thread
-t = threading.Thread(target=read_from_port, daemon=True, args=(modem_port,))
-print('Starting a listening thread...')
-t.start()
+def main():
+    host = '0.0.0.0'  # Nasłuchiwanie na wszystkich dostępnych interfejsach sieciowych
+    port = 12345
 
-# Initialize XMODEM protocol
-modem = XMODEM(getc, putc)
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
+        server_socket.bind((host, port))
+        server_socket.listen()
+        print(f"Serwer nasłuchuje na porcie {port}...")
+        receive_file(server_socket)
 
-# Main program loop
-while True:
-    message = input("Enter command or 'exit': ")
-    
-    if message == 'exit':
-        modem_port.close()
-        break
-    elif message == 'send':
-        filename = input("Enter the filename to send: ")
-        with open(filename, 'rb') as file_to_send:
-            modem.send(file_to_send)
-        print("File sent.")
-    elif message == 'receive':
-        filename = input("Enter the filename to save as: ")
-        with open(filename, 'wb') as file_to_receive:
-            modem.recv(file_to_receive)
-        print("File received.")
-    else:
-        modem_port.write((message + '\r').encode('utf-8'))
+if __name__ == "__main__":
+    main()
